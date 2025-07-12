@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Layout</title>
+  <style>
+    body {
+      margin: 0;
+      background: pink;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .side-text {
+      font-size: 10vw; /* scales with screen width */
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .image-box img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border: 5px solid #333;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .side-text {
+        font-size: 10vw;
+      }
+      .side-text {
+      font-size: 17vw; /* scales with screen width */
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+        }
+    .image-box img {
+      max-width: 60vw;
+      max-height: 50vh;
+      border: 5px solid #333;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      height: auto;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="side-text">Fuck</div>
+    <div class="image-box">
+      <img src="hello.png" alt="Centered Image" />
+    </div>
+    <div class="side-text">You😚</div>
+  </div>
+</body>
+</html>
